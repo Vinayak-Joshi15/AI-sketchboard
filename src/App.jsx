@@ -1,4 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import Answer from "./Components/Answer";
 import rough from "roughjs/bundled/rough.esm";
 import getStroke from "perfect-freehand";
 
@@ -464,8 +465,7 @@ const App = () => {
         <label htmlFor="pencil">Pencil</label>
         <input type="radio" id="text" checked={tool === "text"} onChange={() => setTool("text")} />
         <label htmlFor="text">Text</label>
-
-        <div className="border-2 border-solid max-w-2xl max-h-2xl text-lg"></div>
+      <Answer />
       </div>
       <div style={{ position: "fixed", zIndex: 2, bottom: 0, padding: 10 }}>
         <button onClick={undo} className="px-4 py-4 border-2 border-solid rounded-sm">Undo</button>
